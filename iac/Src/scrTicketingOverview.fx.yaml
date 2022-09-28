@@ -84,16 +84,6 @@ scrTicketingOverview As screen:
             Y: =108
             ZIndex: =6
 
-        lblCategory As label:
-            Align: =Align.Right
-            FontWeight: =FontWeight.Semibold
-            Height: =20
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.category.Value
-            X: =426
-            Y: =130
-            ZIndex: =7
-
         lblSupporter As label:
             Align: =Align.Right
             FontWeight: =FontWeight.Semibold
