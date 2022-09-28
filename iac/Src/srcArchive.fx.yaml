@@ -1,16 +1,20 @@
-scrTicketingOverview As screen:
+srcArchive As screen:
 
-    "glyTickets As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+    "glyTickets_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =706
-        Items: =Filter(ticket, status.Value <> "Done")
+        Items: |-
+            =Filter(
+                ticket,
+                status.Value <> "Open" && status.Value <> "In Progress"
+            )
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(200, Self.Height - 60)
         Width: =690
         Y: =62
-        ZIndex: =8
+        ZIndex: =1
 
-        Image1_1 As image:
+        Image1_2 As image:
             Height: =128
             Image: =If(ThisItem.category.Value = "incident", '002-warning', If(ThisItem.category.Value = "hardware", '003-workstation', '001-software'))
             OnSelect: =Select(Parent)
@@ -19,7 +23,7 @@ scrTicketingOverview As screen:
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =1
 
-        lblTicketName As label:
+        lblTicketName_1 As label:
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -28,12 +32,12 @@ scrTicketingOverview As screen:
             PaddingTop: =0
             Text: =ThisItem.Title
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - Image1_1.Width - 104
-            X: =Image1_1.X + Image1_1.Width + 24
+            Width: =Parent.TemplateWidth - Image1_2.Width - 104
+            X: =Image1_2.X + Image1_2.Width + 24
             Y: =44
             ZIndex: =2
 
-        lblId As label:
+        lblId_1 As label:
             Align: =Align.Right
             FontWeight: =FontWeight.Bold
             Height: =24
@@ -47,10 +51,10 @@ scrTicketingOverview As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =41
             X: =532
-            Y: =lblTicketName.Y + lblTicketName.Height + 4
+            Y: =lblTicketName_1.Y + lblTicketName_1.Height + 4
             ZIndex: =3
 
-        NextArrow1_1 As icon.ChevronRight:
+        NextArrow1_2 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             Height: =60
             Icon: =Icon.ChevronRight
@@ -66,14 +70,14 @@ scrTicketingOverview As screen:
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =4
 
-        Separator1_1 As rectangle:
+        Separator1_2 As rectangle:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
 
-        lblPriority As label:
+        lblPriority_2 As label:
             Align: =Align.Right
             Color: =If(ThisItem.priority.Value = "Medium", Orange, If(ThisItem.priority.Value = "High", Red, Green))  
             FontWeight: =FontWeight.Bold
@@ -84,7 +88,7 @@ scrTicketingOverview As screen:
             Y: =108
             ZIndex: =6
 
-        lblCategory As label:
+        lblCategory_2 As label:
             Align: =Align.Right
             FontWeight: =FontWeight.Semibold
             Height: =20
@@ -94,7 +98,7 @@ scrTicketingOverview As screen:
             Y: =130
             ZIndex: =7
 
-        lblSupporter As label:
+        lblSupporter_6 As label:
             Align: =Align.Right
             FontWeight: =FontWeight.Semibold
             Height: =20
@@ -104,7 +108,7 @@ scrTicketingOverview As screen:
             Y: =154
             ZIndex: =8
 
-        lblIDTitle As label:
+        lblIDTitle_2 As label:
             FontWeight: =FontWeight.Bold
             Height: =24
             OnSelect: =Select(Parent)
@@ -120,7 +124,7 @@ scrTicketingOverview As screen:
             Y: =84
             ZIndex: =9
 
-        lblPriorityTitle As label:
+        lblPriorityTitle_2 As label:
             FontWeight: =FontWeight.Bold
             Height: =24
             OnSelect: =Select(Parent)
@@ -136,7 +140,7 @@ scrTicketingOverview As screen:
             Y: =105
             ZIndex: =10
 
-        lblCategoryTitle As label:
+        lblCategoryTitle_2 As label:
             FontWeight: =FontWeight.Semibold
             Height: =24
             OnSelect: =Select(Parent)
@@ -152,7 +156,7 @@ scrTicketingOverview As screen:
             Y: =126
             ZIndex: =11
 
-        lblSupporterTitle As label:
+        lblSupporterTitle_4 As label:
             FontWeight: =FontWeight.Semibold
             Height: =24
             OnSelect: =Select(Parent)
@@ -168,23 +172,23 @@ scrTicketingOverview As screen:
             Y: =150
             ZIndex: =12
 
-    cpmHeader_5 As cpmHeader_3:
+    cpmHeader_6 As cpmHeader_3:
         Width: =1366
-        ZIndex: =9
+        ZIndex: =2
 
-    "glyTicketDetail As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+    "glyTicketDetail_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         DisplayMode: =DisplayMode.View
         Height: =708
-        Items: =glyTickets.Selected
+        Items: =glyTickets_1.Selected
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =708
         Width: =676
         X: =690
         Y: =60
-        ZIndex: =10
+        ZIndex: =3
 
-        Image1 As image:
+        Image1_3 As image:
             Height: =128
             Image: =If(ThisItem.category.Value = "incident", '002-warning', If(ThisItem.category.Value = "hardware", '003-workstation', '001-software'))
             OnSelect: =Select(Parent)
@@ -193,7 +197,7 @@ scrTicketingOverview As screen:
             Y: =40
             ZIndex: =1
 
-        Title1 As label:
+        Title1_1 As label:
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -202,12 +206,12 @@ scrTicketingOverview As screen:
             PaddingTop: =0
             Text: =ThisItem.Title
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - Image1.Width - 104
+            Width: =Parent.TemplateWidth - Image1_3.Width - 104
             X: =168
             Y: =101
             ZIndex: =2
 
-        lblID_1 As label:
+        lblID_2 As label:
             Align: =Align.Right
             FontWeight: =FontWeight.Bold
             Height: =35
@@ -223,14 +227,14 @@ scrTicketingOverview As screen:
             Y: =230
             ZIndex: =3
 
-        Separator1 As rectangle:
+        Separator1_3 As rectangle:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
 
-        lblPriority_1 As label:
+        lblPriority_3 As label:
             Align: =Align.Right
             Color: =If(ThisItem.priority.Value = "Medium", Orange, If(ThisItem.priority.Value = "High", Red, Green))  
             FontWeight: =FontWeight.Bold
@@ -242,7 +246,7 @@ scrTicketingOverview As screen:
             Y: =270
             ZIndex: =7
 
-        lblCategory_1 As label:
+        lblCategory_3 As label:
             Align: =Align.Right
             FontWeight: =FontWeight.Semibold
             Height: =35
@@ -253,7 +257,7 @@ scrTicketingOverview As screen:
             Y: =310
             ZIndex: =8
 
-        lblSupporter_1 As label:
+        lblSupporter_8 As label:
             Align: =Align.Right
             FontWeight: =FontWeight.Semibold
             Height: =35
@@ -265,7 +269,7 @@ scrTicketingOverview As screen:
             Y: =350
             ZIndex: =9
 
-        lblIDTitle_1 As label:
+        lblIDTitle_3 As label:
             FontWeight: =FontWeight.Bold
             Height: =35
             OnSelect: =Select(Parent)
@@ -280,7 +284,7 @@ scrTicketingOverview As screen:
             Y: =230
             ZIndex: =10
 
-        lblPriorityTitle_1 As label:
+        lblPriorityTitle_3 As label:
             FontWeight: =FontWeight.Bold
             Height: =35
             OnSelect: =Select(Parent)
@@ -295,7 +299,7 @@ scrTicketingOverview As screen:
             Y: =270
             ZIndex: =11
 
-        lblCategoryTitle_1 As label:
+        lblCategoryTitle_3 As label:
             FontWeight: =FontWeight.Semibold
             Height: =35
             OnSelect: =Select(Parent)
@@ -310,7 +314,7 @@ scrTicketingOverview As screen:
             Y: =310
             ZIndex: =12
 
-        lblSupporterTitle_1 As label:
+        lblSupporterTitle_5 As label:
             FontWeight: =FontWeight.Semibold
             Height: =35
             OnSelect: =Select(Parent)
@@ -325,7 +329,7 @@ scrTicketingOverview As screen:
             Y: =350
             ZIndex: =13
 
-        lblDescriptionTitle_2 As label:
+        lblDescriptionTitle_3 As label:
             FontWeight: =FontWeight.Semibold
             Height: =35
             OnSelect: =Select(Parent)
@@ -340,7 +344,7 @@ scrTicketingOverview As screen:
             Y: =492
             ZIndex: =14
 
-        lblSupporter_2 As label:
+        lblSupporter_11 As label:
             Align: =Align.Right
             FontWeight: =FontWeight.Semibold
             Height: =93
@@ -353,7 +357,7 @@ scrTicketingOverview As screen:
             Y: =495
             ZIndex: =15
 
-        lblSupporter_3 As label:
+        lblSupporter_9 As label:
             Align: =Align.Right
             FontWeight: =FontWeight.Semibold
             Height: =35
@@ -365,7 +369,7 @@ scrTicketingOverview As screen:
             Y: =394
             ZIndex: =16
 
-        lblSupporterTitle_2 As label:
+        lblSupporterTitle_6 As label:
             FontWeight: =FontWeight.Semibold
             Height: =35
             OnSelect: =Select(Parent)
@@ -380,7 +384,7 @@ scrTicketingOverview As screen:
             Y: =394
             ZIndex: =17
 
-        lblSupporter_4 As label:
+        lblSupporter_10 As label:
             Align: =Align.Right
             FontWeight: =FontWeight.Semibold
             Height: =35
@@ -392,7 +396,7 @@ scrTicketingOverview As screen:
             Y: =434
             ZIndex: =18
 
-        lblSupporterTitle_3 As label:
+        lblSupporterTitle_7 As label:
             FontWeight: =FontWeight.Semibold
             Height: =35
             OnSelect: =Select(Parent)
@@ -407,7 +411,7 @@ scrTicketingOverview As screen:
             Y: =434
             ZIndex: =19
 
-        lblSupporter_5 As label:
+        lblSupporter_7 As label:
             FontWeight: =FontWeight.Semibold
             Height: =35
             OnSelect: =Select(Parent)
