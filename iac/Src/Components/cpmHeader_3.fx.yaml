@@ -1,0 +1,43 @@
+cpmHeader_3 As CanvasComponent:
+    Fill: =
+    Height: =60
+    ShowBackButton: =true
+    Width: =Self.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblHeader_1 As label:
+        Align: =Align.Center
+        Fill: =RGBA(102, 182, 227, 1)
+        Font: =Font.'Lato Black'
+        Height: =60
+        Size: =20
+        Text: ="Ticketing Aveniq"
+        Width: =App.Width
+        ZIndex: =1
+
+    imgHeader_1 As image:
+        Height: =60
+        Image: ='aveniq-logo'
+        ImagePosition: =ImagePosition.Fill
+        Width: =81
+        ZIndex: =2
+
+    lblUser_1 As label:
+        Align: =Align.Right
+        Height: =60
+        Size: =15
+        Text: =User().FullName
+        X: =App.Width - Self.Width
+        ZIndex: =3
+
+    Icon1 As icon.Reset:
+        Height: =Parent.Height   
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(srcMain)
+        PaddingBottom: =15
+        PaddingTop: =15  
+        X: =81
+        ZIndex: =4
+
