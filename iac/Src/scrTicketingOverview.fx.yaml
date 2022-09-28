@@ -9,7 +9,8 @@ scrTicketingOverview As screen:
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(160, Self.Height - 60)
-        Y: =108
+        X: =363
+        Y: =134
         ZIndex: =8
 
         Title3_1 As label:
