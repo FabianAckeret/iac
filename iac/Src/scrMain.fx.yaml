@@ -1,0 +1,48 @@
+scrMain As screen:
+
+    btnNewTicket As button:
+        Fill: =RGBA(102, 182, 227, 1)
+        Height: =205
+        OnSelect: =Navigate(scrNeuesTicket,ScreenTransition.CoverRight)
+        Size: =25
+        Text: ="New Ticket"
+        Width: =252
+        X: =110
+        Y: =170
+        ZIndex: =2
+
+    btnAdmin As button:
+        Fill: =RGBA(102, 182, 227, 1)
+        Height: =205
+        Size: =25
+        Text: ="Admin"
+        Visible: =!IsBlank(LookUp(admins,employee.Email = User().Email))
+        Width: =252
+        X: =540
+        Y: =472
+        ZIndex: =3
+
+    btnStatus As button:
+        Fill: =RGBA(102, 182, 227, 1)
+        Height: =205
+        OnSelect: =Navigate(scrTicketingOverview,ScreenTransition.CoverRight)
+        Size: =25
+        Text: ="Ticketing Overview"
+        Width: =252
+        X: =540
+        Y: =170
+        ZIndex: =4
+
+    btnArchiv As button:
+        Fill: =RGBA(102, 182, 227, 1)
+        Height: =205
+        Size: =25
+        Text: ="Archive"
+        Width: =252
+        X: =970
+        Y: =170
+        ZIndex: =5
+
+    cpmHeader_2 As cpmHeader:
+        ZIndex: =6
+
