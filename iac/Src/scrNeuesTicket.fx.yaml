@@ -293,6 +293,7 @@ scrNeuesTicket As screen:
                 ZIndex: =4
 
         person_DataCard3 As typedDataCard.comboBoxEditCard:
+            BorderColor: =RGBA(172, 62, 11, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="person"
             Default: =ThisItem.person
