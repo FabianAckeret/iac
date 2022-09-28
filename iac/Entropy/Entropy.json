@@ -85,7 +85,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/28/2022 07:12:34",
+  "HeaderLastSavedDateTimeUTC": "09/28/2022 07:16:31",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1639d0c4-81ff-48e4-8dd6-c51a6f7bc63a": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/1470ac40c9234eea85bc326595ec4096\"",
@@ -96,7 +96,7 @@
     "aveniq-logo": "0001.png"
   },
   "LocalResourceRootPaths": {
-    "aveniq-logo": "https://docserverpwaprodwus.blob.core.windows.net/7d910fac-26e7-4c82-b676-1d1570875ecf-1/resource/Assets0Images00001.png?sv=2017-04-17&sr=b&sig=0otZiZNOWE7z0gvr%2BRNn7a3nfSdqpHxLLUboghn7%2BgE%3D&spr=https&se=2022-09-29T07%3A26%3A06Z&sp=r"
+    "aveniq-logo": "https://docserverpwaprodwus.blob.core.windows.net/aede0887-ae8b-41d4-96bd-14539dd15a93-1/resource/Assets0Images00001.png?sv=2017-04-17&sr=b&sig=eGDAJMXHC40sQMYme7D8SaIfrqsjCELJGbPh166MWgo%3D&spr=https&se=2022-09-29T07%3A31%3A09Z&sp=r"
   },
   "OrderComponentMetadata": {
     "0298cd3649f440f1a5eba17f7cc774d7": 1,
@@ -218,7 +218,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 1.0217627,
+    "AnalysisLoadTime": 1.1495725,
     "ControlCount": {
       "0298cd3649f440f1a5eba17f7cc774d7": 1,
       "a86b2444c62c46a5b47a868a669588f9": 4,
@@ -236,7 +236,7 @@
       "text": 2,
       "typedDataCard": 7
     },
-    "DeserializationLoadTime": 2.6982696,
+    "DeserializationLoadTime": 2.9909646,
     "ErrorCount": 30
   },
   "WasLocalDatabaseReferencesEmpty": true
