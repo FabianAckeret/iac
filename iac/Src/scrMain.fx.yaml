@@ -39,7 +39,7 @@ scrMain As screen:
         Size: =25
         Text: ="Archive"
         Width: =252
-        X: =970
+        X: =979
         Y: =170
         ZIndex: =5
 

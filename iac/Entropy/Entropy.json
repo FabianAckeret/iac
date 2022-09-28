@@ -85,18 +85,18 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/28/2022 07:16:41",
+  "HeaderLastSavedDateTimeUTC": "09/28/2022 07:18:20",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "1639d0c4-81ff-48e4-8dd6-c51a6f7bc63a": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/1470ac40c9234eea85bc326595ec4096\"",
-    "eea44833-31c6-4de3-b517-7d0da30bf400": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/1470ac40c9234eea85bc326595ec4096\""
+    "1639d0c4-81ff-48e4-8dd6-c51a6f7bc63a": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/4388eac40c7140919c649a68075bb67f\"",
+    "eea44833-31c6-4de3-b517-7d0da30bf400": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/4388eac40c7140919c649a68075bb67f\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {
     "aveniq-logo": "0001.png"
   },
   "LocalResourceRootPaths": {
-    "aveniq-logo": "https://docserverpwaprodwus.blob.core.windows.net/aede0887-ae8b-41d4-96bd-14539dd15a93-1/resource/Assets0Images00001.png?sv=2017-04-17&sr=b&sig=eGDAJMXHC40sQMYme7D8SaIfrqsjCELJGbPh166MWgo%3D&spr=https&se=2022-09-29T07%3A31%3A09Z&sp=r"
+    "aveniq-logo": "https://docserverpwaprodwus.blob.core.windows.net/ddca6d6c-c69e-4b81-9bea-6a33e2487591-1/resource/Assets0Images00001.png?sv=2017-04-17&sr=b&sig=pLs2r9Zg7ILh4zpsF%2BezdYeV9wUhI6e9YQgVBqkBvZA%3D&spr=https&se=2022-09-29T07%3A32%3A20Z&sp=r"
   },
   "OrderComponentMetadata": {
     "0298cd3649f440f1a5eba17f7cc774d7": 1,
@@ -218,7 +218,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 1.1495725,
+    "AnalysisLoadTime": 1.0088344,
     "ControlCount": {
       "0298cd3649f440f1a5eba17f7cc774d7": 1,
       "a86b2444c62c46a5b47a868a669588f9": 4,
@@ -236,7 +236,7 @@
       "text": 2,
       "typedDataCard": 7
     },
-    "DeserializationLoadTime": 2.9909646,
+    "DeserializationLoadTime": 2.8900401,
     "ErrorCount": 30
   },
   "WasLocalDatabaseReferencesEmpty": true
