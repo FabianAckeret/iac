@@ -1,4 +1,4 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: =Set(
+    OnStart: =Set(gblIsAdmin,!IsBlank(LookUp(admins,employee.Email = User().Email)))
 
